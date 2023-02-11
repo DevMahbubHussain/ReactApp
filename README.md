@@ -1,2 +1,0 @@
-# ReactApp
-React &amp; Redux 
