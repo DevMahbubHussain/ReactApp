@@ -15,6 +15,10 @@ import Error from './components/pages/Error'
 import Navbar from './components/Navbar/Navbar';
 import Blogs from './components/pages/Blogs';
 import User from './components/pages/User';
+import Dashboard from './components/pages/Dashboard';
+import Login from './components/pages/Login';
+import PrivateOutlet from './components/PrivateOutlet';
+import Post from './components/pages/Post';
 
 function App() {
 
@@ -45,6 +49,12 @@ function App() {
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/user" element={<User />}></Route>
           <Route path="*" element={<Error />}></Route>
+
+          <Route path="/*" element={<PrivateOutlet />}>
+            <Route path="dashboard" element={<Dashboard />}></Route>
+            <Route path="add-post" element={<Post />}></Route>
+          </Route>
+          <Route path="/login" element={<Login />}></Route>
         </Routes>
       </BrowserRouter>
 
